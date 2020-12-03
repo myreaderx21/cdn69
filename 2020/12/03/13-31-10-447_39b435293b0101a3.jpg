@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<title>Webmail</title>
+<meta name="viewport" content="" id="viewport" />
+<link rel="shortcut icon" href="skins/larry/images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="skins/larry/styles.min.css?s=1561629699" />
+<link rel="stylesheet" type="text/css" href="plugins/xskin/../xframework/assets/styles/larry.css?s=1583334142">
+<link rel="stylesheet" type="text/css" href="plugins/xskin/../../skins/custom/assets/custom.css?s=1600437405">
+<link rel="stylesheet" type="text/css" href="plugins/jqueryui/themes/larry/jquery-ui.css?s=1561629699">
+<link rel="stylesheet" type="text/css" href="plugins/xskin/assets/larry_styles/xdesktop.css?s=1578472260">
+<link rel="stylesheet" type="text/css" href="plugins/xskin/../../skins/outlook/assets/desktop.css?s=1588600256">
+<script type="text/javascript" src="skins/larry/ui.min.js?s=1561629699"></script>
+
+
+
+
+<!-- Customized section -->
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4274730-39', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<script src="program/js/jquery.min.js?s=1561629699" type="text/javascript"></script>
+<script src="program/js/common.min.js?s=1561629699" type="text/javascript"></script>
+<script src="program/js/app.min.js?s=1561629699" type="text/javascript"></script>
+<script src="program/js/jstz.min.js?s=1561629699" type="text/javascript"></script>
+<script type="text/javascript">
+
+/*
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) 2005-2014 The Roundcube Dev Team
+
+        The JavaScript code in this page is free software: you can redistribute
+        it and/or modify it under the terms of the GNU General Public License
+        as published by the Free Software Foundation, either version 3 of
+        the License, or (at your option) any later version.
+
+        The code is distributed WITHOUT ANY WARRANTY; without even the implied
+        warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        See the GNU GPL for more details.
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+*/
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"login","standard_windows":false,"locale":"it_IT","devel_mode":null,"cookie_domain":"","cookie_path":"\/","cookie_secure":false,"skin":"outlook","refresh_interval":60,"session_lifetime":600,"action":"get","comm_path":".\/?_task=login","compose_extwin":false,"xelastic":false,"dateFormats":{"php":"Y-m-d","moment":"YYYY-MM-DD","datepicker":"yy-mm-dd"},"dmFormats":{"php":"m-d","moment":"MM-DD","datepicker":"mm-dd"},"timeFormats":{"php":"H:i","moment":"HH:mm","datepicker":"HH:mm"},"xphone":false,"xtablet":false,"xmobile":false,"xdesktop":true,"xdevice":"desktop","timezoneOffset":3600,"xsidebarVisible":true,"xassets":["..\/xframework\/assets\/bower_components\/js-cookie\/src\/js.cookie.js","..\/xframework\/assets\/scripts\/framework.min.js","..\/xframework\/assets\/styles\/larry.css","xskin:..\/..\/skins\/custom\/assets\/custom.css","xskin:assets\/larry_scripts\/xskin.min.js","xskin:assets\/larry_scripts\/xdesktop.min.js","xskin:assets\/larry_styles\/xdesktop.css","xskin:..\/..\/skins\/outlook\/assets\/desktop.css"],"xskin":"outlook","xskin_type":"desktop","rcp_skin":true,"date_format":"yy-mm-dd","xcolor":"0075c8","xwatermark":"..\/..\/plugins\/xskin\/assets\/images\/watermark.png","request_token":"8G60sKoKfRmPYfwahI5u6D5K6EFkrC9e"});
+rcmail.add_label({"loading":"Caricamento...","servererror":"Errore del server!","connerror":"Errore di connessione (impossibile raggiungere il server)!","requesttimedout":"Richiesta scaduta","refreshing":"Aggiornamento...","windowopenerror":"La finestra di popup \u00e8 stata bloccata!","uploadingmany":"Caricamento file...","close":"Chiudi","login":"Accedi","folders":"Cartelle","search":"Ricerca","attachment":"Allegato","section":"Sezione","options":"Opzioni","errortitle":"Si \u00e8 verificato un errore!","toggleadvancedoptions":"Passa alle impostazioni avanzate"});
+rcmail.gui_container("loginfooter","bottomline");
+rcmail.gui_object('loginform', 'form');
+rcmail.gui_object('message', 'message');
+</script>
+
+<script type="text/javascript" src="plugins/xskin/../xframework/assets/bower_components/js-cookie/src/js.cookie.min.js?s=1532525927"></script>
+<script type="text/javascript" src="plugins/xskin/../xframework/assets/scripts/framework.min.js?s=1583137710"></script>
+<script type="text/javascript" src="plugins/jqueryui/js/jquery-ui.min.js?s=1561629699"></script>
+<script type="text/javascript" src="plugins/jqueryui/js/i18n/jquery.ui.datepicker-it.js?s=1561629699"></script>
+<script type="text/javascript" src="plugins/xskin/assets/larry_scripts/xskin.min.js?s=1584530779"></script>
+<script type="text/javascript" src="plugins/xskin/assets/larry_scripts/xdesktop.min.js?s=1584530764"></script>
+</head>
+<body class="xlarry xskin skin-outlook color-0075c8 login-page xdesktop xskin-light xskin-square font-icons-toolbars xicons-traditional">
+
+<h1 class="voice">Webmail Accedi</h1>
+
+<div id="login-form">
+
+<div class="colonna-info">
+  <h3>Benvenuto su</h3>
+  <h1>Webmail</h1>
+  <div class="colonna-sx-copyright">
+    <div class="colonna-sx-copyright-content">Copyright © 2007 - 2020</div>
+  </div>
+</div>
+
+<div class="box-inner" role="main">
+  <img src="skins/outlook/assets/images/logo_header.png" id="logo" alt="Webmail">
+  <a class="logo-shellrent" title="Webmail" href="#"><img src="https://www.shellrent.com/wp-content/uploads/webmail-clienti.png"></a>
+  <div class="titolo-form"><h2>Accedi alla mia Webmail</h2></div>
+  <div id="company-name">Webmail</div><h1><span>Accedi</span></h1>
+<form name="form" method="post" action="./?_task=login">
+<input type="hidden" name="_token" value="8G60sKoKfRmPYfwahI5u6D5K6EFkrC9e">
+  <input type="hidden" name="_task" value="login"><input type="hidden" name="_action" value="login"><input type="hidden" name="_timezone" id="rcmlogintz" value="_default_"><input type="hidden" name="_url" id="rcmloginurl" value="_task=mail&amp;_action=get&amp;_mbox=INBOX&amp;_uid=9243&amp;_token=RcXl9QYrKpuVuSOVieK89awhNOol2FmE&amp;_part=1.3&amp;_embed=1&amp;_mimeclass=image"><table><tbody><tr><td class="title"><label for="rcmloginuser">Nome Utente</label>
+</td>
+<td class="input"><input name="_user" id="rcmloginuser" required="required" placeholder="Email" size="40" autocapitalize="off" autocomplete="off" type="text"></td>
+</tr>
+<tr><td class="title"><label for="rcmloginpwd">Password</label>
+</td>
+<td class="input"><input name="_pass" id="rcmloginpwd" required="required" placeholder="Password" size="40" autocapitalize="off" autocomplete="off" type="password"></td>
+</tr>
+</tbody>
+</table>
+<p class="formbuttons"><input type="submit" id="rcmloginsubmit" class="button mainaction" value="Accedi"></p>
+
+  </form>
+  <div class="box-bottom" role="complementary">
+    <div id="message"></div>
+    <noscript>
+      <p class="noscriptwarning">Attenzione: questo servizio di webmail richiede Javascript! Per utilizzarlo abilita Javascript nelle impostazioni del tuo browser.</p>
+    </noscript>
+  </div>
+  <div class="help-link"><a href="https://guide.shellrent.com/come-aprire-un-ticket-di-assistenza/" target="_blank">Non riesci ad effettuare il login?</a></div>
+</div>
+
+
+
+<div id="bottomline" role="contentinfo">
+	Webmail 
+			&nbsp;&#9679;&nbsp; <a href="https://www.serverlet.com/" target="_blank" class="support-link">Ottieni supporto</a>
+		
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+if (!window.UI) { var UI = new rcube_mail_ui(); }
+</script>
+
+
+
+
+<a id="vendor-branding" href="https://roundcubeplus.com" target="_blank" title="More Roundcube skins and plugins at roundcubeplus.com"><span>+</span></a><script type="text/javascript">
+
+$(document).ready(function(){ 
+rcmail.init();
+var images = ["skins\/larry\/images\/ajaxloader.gif","skins\/larry\/images\/ajaxloader_dark.gif","skins\/larry\/images\/buttons.png","skins\/larry\/images\/addcontact.png","skins\/larry\/images\/filetypes.png","skins\/larry\/images\/listicons.png","skins\/larry\/images\/messages.png","skins\/larry\/images\/messages_dark.png","skins\/larry\/images\/quota.png","skins\/larry\/images\/selector.png","skins\/larry\/images\/splitter.png","skins\/larry\/images\/watermark.jpg"];
+            for (var i=0; i<images.length; i++) {
+                img = new Image();
+                img.src = images[i];
+            }
+});
+</script>
+
+</body>
+</html>
